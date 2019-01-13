@@ -2,11 +2,13 @@ const express = require('express') //backend node frame
 const consola = require('consola') //console logger
 const { Nuxt, Builder } = require('nuxt')
 
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser')//body parser for express
 const cors = require('cors') //cross origin resource sharing
 
+//declare the express server 
 const app = express()
 
+//declare our dbserver
 function dbserver() {
   const dbport = process.env.PORT || 5000
   app.set('dbport',dbport) 
@@ -19,11 +21,9 @@ function dbserver() {
 
 dbserver()
 
-
+//nuxt server
 const host = process.env.HOST || '127.0.0.1'
 const port = process.env.PORT || 3000
-
-
 
 app.set('port', port)
 // Import and Set Nuxt.js options
