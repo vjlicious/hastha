@@ -1,7 +1,6 @@
 <<template>
   <div>
-    <h6>Hello World by default</h6>
+    <h6>hello world</h6>
   </div>
 </template>
-
 

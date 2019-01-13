@@ -1,14 +1,12 @@
 <<template>
   <div>
-    
+
   </div>
 </template>
 <script>
 export default {
-  
+  layout: 'hello'
 }
 </script>
-<style lang="scss">
 
-</style>
 
