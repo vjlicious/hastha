@@ -12,5 +12,6 @@
     position: absolute;
     top:8%;
     left:5%;
+
   }
 </style>
