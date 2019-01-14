@@ -3,7 +3,6 @@
     <nuxt/>
   </div>
 </template>
-
 <style>
 *,
 *::before,

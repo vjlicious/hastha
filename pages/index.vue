@@ -2,9 +2,7 @@
   <div class="home-page">
     <div class="background">
       <div class="row content">
-        <header>
-          <img src="'~/assests/img/'" alt="" srcset="">
-        </header>
+        <Header />
         <div class="col-sm content-left">
           <h1>HASTHA</h1>
           <div class="second">
@@ -20,7 +18,14 @@
   </div>
 </template>
 <script>
+import Header from '@/components/Header.vue'
+export default {
+  components: {
+    Header
+  } 
+}
 </script>
+
 
 <style scoped>
   .home-page {
