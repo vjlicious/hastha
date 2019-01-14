@@ -6,7 +6,6 @@
         <b-form-input :id="`type-${type}`" :type="type"  :placeholder="pc">
         </b-form-input>
         </b-row>
-    </b-row>
   </b-container>
 </div>
 </template>
