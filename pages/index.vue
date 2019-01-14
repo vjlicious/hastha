@@ -7,9 +7,9 @@
       <h1>company</h1>
       </div>
       <div class="content-right">
-        <h5>GET STARTED</h5>
-        <nuxt-link to="/aboutus">Aboutus</nuxt-link>   
+      
       </div>
+       <h5 id="gs"> <nuxt-link to="/illustration">GET STARTED</nuxt-link>  </h5>
     </div>
   </div>
 </template>
@@ -24,6 +24,13 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+#gs{
+position: relative;
+top:80%;
+left:90%;
+
+
 }
 
 </style>
