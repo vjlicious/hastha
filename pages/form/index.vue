@@ -30,45 +30,76 @@
  <form>
   <div class="form-group is-valid">
     
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email:" required>
+   <p> <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email:" v-model="email" required>{{email}}</p>
    
   </div>
   <div class="form-group">
    
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter name:" required>
+    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter name:" v-model="name" required>
   </div>
    <div class="form-group">
    
-    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Contact No:" required>
+    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Contact No:" v-model="no" required>
   </div>
     <div class="form-group">
     
-    <input type="text" class="form-control" id="inputAddress" placeholder="Address:" required>
+    <input type="text" class="form-control" id="inputAddress" placeholder="Address:" v-model="address" required>
   </div>
     <div class="form-group">
     
-    <input type="text" class="form-control" id="inputAddress" placeholder="College/University" required>
+    <input type="text" class="form-control" id="inputAddress" placeholder="College/University" v-model="college" required>
   </div>
      <div class="form-group">
       <label for="inputEmail4" ><p class="h3">Year of Admission</p></label>
-    <input type="date" class="form-control" id="inputAddress" placeholder="Year of Admission" required>
+    <input type="date" class="form-control" id="inputAddress" placeholder="Year of Admission" v-model="year" required>
   </div>
      <div class="form-group">
      <label for="inputEmail4" ><p class="h3">Do you have a website / blog?:If Yes, please include the link here. If not, leave blank:</p></label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="">
+    <input type="text" class="form-control" id="inputAddress" placeholder=" " v-model="web" >
   </div>
   
   <div class="form-group">
       <label for="inputEmail4" ><p class="h3">Why would you like to work for Hastha?:</p></label>
-    <input type="text" class="form-control" id="inputAddress" placeholder="" required>
+    <input type="text" class="form-control" id="inputAddress" placeholder="" v-model="why" required>
   </div>
    
    
    
-   <div class="form-group">
+  <div class="form-group">
  
- <label for="inputEmail4" ><p class="h3">Which social media you are present in ?:</p></label>
+     <label for="inputEmail4" ><p class="h3">Which social media you are present in ?:</p></label>
   
+                 <div class="col-md-4">
+			
+				
+				<div class="form-check" >
+					<label>
+						<input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Linked in</span>
+					</label>
+				</div>
+				<div class="form-check">
+					<label>
+						<input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Facebook</span>
+					</label>
+				</div>
+				<div class="form-check">
+					<label>
+						<input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Twitter</span>
+					</label>
+				</div>
+				<div class="form-check">
+					<label>
+						<input type="checkbox" name="check" > <span class="label-text" style="font-size:20px">Instagram</span>
+					</label>
+				</div>
+        	<div class="form-check">
+					<label>
+						<input type="checkbox" name="check" > <span class="label-text" style="font-size:20px">Others</span>
+					</label>
+				</div>
+			
+
+		</div>
     
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
@@ -80,7 +111,21 @@
 export default {
     data(){
         return{
-      
+                   data: {
+    email     : 'hi!',
+    name  : '',
+    no   : 'one',
+    address : 'two',
+    college: '',
+    year:'',
+    web:'',
+    why:'',
+    soc:['','','']
+           
+           
+           
+           
+           }
         }
     }
 }
@@ -112,6 +157,9 @@ form{
     align-items: center;
     background-color: aqua;
 
+}
+.label-text{
+  font-size: 20px;
 }
 
 </style>
