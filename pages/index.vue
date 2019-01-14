@@ -2,6 +2,9 @@
   <div class="home-page">
     <div class="background">
       <div class="row content">
+        <header>
+          <img src="'~/assests/img/'" alt="" srcset="">
+        </header>
         <div class="col-sm content-left">
           <h1>HASTHA</h1>
           <div class="second">
@@ -35,7 +38,6 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-
   }
   .content-left{
     position: absolute;
