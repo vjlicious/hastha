@@ -1,8 +1,9 @@
-<<template>
+<template>
   <div>
-    <nuxt />
+    <nuxt/>
   </div>
 </template>
+
 <style>
 *,
 *::before,
@@ -13,7 +14,7 @@
 }
 html{
   box-sizing: border-box;
-  font-size: 62.5%
+  font-size: 62.5%;
 }
 body{
     width: 100vw;

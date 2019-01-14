@@ -8,11 +8,14 @@
       </div>
       <div class="content-right">
         <h5>GET STARTED</h5>
-        <button type="submit">GET STARTED</button>
+        <nuxt-link to="/aboutus">Aboutus</nuxt-link>   
       </div>
     </div>
   </div>
 </template>
+<script>
+</script>
+
 <style scoped>
 .background {
   width: 100vw;
@@ -22,6 +25,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 </style>
 
 
