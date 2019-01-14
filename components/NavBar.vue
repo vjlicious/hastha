@@ -20,7 +20,7 @@ export default {
   }
   .items {
         text-decoration:none;
-        color:#fff;
+        color:rgb(22, 22, 22);
         font-family: 'Quicksand', sans-serif;
         font-weight:100;
         font-size:1.5em;

@@ -2,7 +2,10 @@
   <div class="home-page">
     <div class="bg">
       <Header />
-      <NavBar><NavBar/>
+      <div class="nav">
+        <NavBar />
+      </div>
+
     </div>
   </div>
 </template>
@@ -31,12 +34,10 @@ export default {
     min-width: 100vw;
     min-height: 100vh;
     box-sizing: border-box;
-    background-image: url('~assets/img/illu.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
-  #holla{
-    color: red;
-  }
+.nav {
+  position: absolute;
+  bottom:0%;
+  display:flex;
+}
 </style>
