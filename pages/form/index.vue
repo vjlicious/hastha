@@ -68,19 +68,7 @@
    <div class="form-group">
  
  <label for="inputEmail4" ><p class="h3">Which social media you are present in ?:</p></label>
-   <div class="custom-control custom-checkbox">
-  <input type="checkbox" class="custom-control-input" id="customCheck1">
-  <label class="custom-control-label" for="customCheck1">Linked in</label>
-   <input type="checkbox" class="custom-control-input" id="customCheck2">
-  <label class="custom-control-label" for="customCheck1">Facebook</label>
-   <input type="checkbox" class="custom-control-input" id="customCheck3">
-  <label class="custom-control-label" for="customCheck1">Twitter</label>
-   <input type="checkbox" class="custom-control-input" id="customCheck4">
-  <label class="custom-control-label" for="customCheck1">Instagram</label>
-    <input type="checkbox" class="custom-control-input" id="customCheck5">
-  <label class="custom-control-label" for="customCheck1">Other</label>
-</div>
-   
+  
     
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
@@ -119,7 +107,7 @@ form{
     font-size: 1.8em;
 }
 .custom-checkbox {
-   
+    display:inline-block;
     justify-content: space-around;
     align-items: center;
     background-color: aqua;
