@@ -9,7 +9,7 @@
       <div class="content-right">
       
       </div>
-       <h5 id="gs"> <nuxt-link to="/main">GET STARTED</nuxt-link>  </h5>
+       <h5 id="gs"> <nuxt-link to="/illustration">GET STARTED</nuxt-link>  </h5>
     </div>
   </div>
 </template>
