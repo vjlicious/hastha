@@ -2,7 +2,7 @@
   <div class="home-page">
     <div class="bg">
       <Header />
-      <NavBar><NavBar/>
+      <NavBar/>
     </div>
   </div>
 </template>
