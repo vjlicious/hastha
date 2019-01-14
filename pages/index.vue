@@ -7,9 +7,8 @@
       <h1>company</h1>
       </div>
       <div class="content-right">
-      
+             <h2 id="gs"><nuxt-link to='/illustration'>GET STARTED</nuxt-link></h2>
       </div>
-       <h5 id="gs"> <nuxt-link to="/illustration">GET STARTED</nuxt-link>  </h5>
     </div>
   </div>
 </template>
@@ -25,12 +24,9 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-#gs{
-position: relative;
-top:80%;
-left:90%;
-
-
+.content-right{
+  position:relative;
+  
 }
 
 </style>
