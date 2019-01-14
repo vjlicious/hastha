@@ -2,10 +2,7 @@
   <div class="home-page">
     <div class="bg">
       <Header />
-      <div class="nav">
-        <NavBar />
-      </div>
-
+      <NavBar />
     </div>
   </div>
 </template>
@@ -34,10 +31,12 @@ export default {
     min-width: 100vw;
     min-height: 100vh;
     box-sizing: border-box;
+    background-image: url('~assets/img/illus.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-.nav {
-  position: absolute;
-  bottom:0%;
-  display:flex;
-}
+  #holla{
+    color: red;
+  }
 </style>
