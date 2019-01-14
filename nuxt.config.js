@@ -14,8 +14,9 @@ module.exports = {
       { hid: 'description', name: 'description', content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {rel:"stylesheet", href:"https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" }
+      { ref:'icon', type: 'image/x-icon', href:'/favicon.ico'},
+      { rel:"stylesheet", type:'text/css', href:"https://fonts.googleapis.com/css?family=Raleway:100,300,400,700|Roboto+Slab:100,300,400,700"}
+
     ]
   },
 
