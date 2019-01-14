@@ -2,7 +2,7 @@
   <div class="home-page">
     <div class="background">
       <div class="content-left">
-
+      <h6>HASTHA</h6>
       <h1>A Revolutionary</h1>
       <h1>company</h1>
       </div>
