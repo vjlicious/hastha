@@ -1,4 +1,4 @@
-import axios from axios;
+import axios from 'axios';
 import { async } from "q";
 import { createContext } from "vm";
 
@@ -13,7 +13,8 @@ class PostService {
                 const data = res.data;
                 resolve(
                     data.map(post => ({
-                        ...post,
+                        ...email,
+                        name,
                         createdAt: new Date(post.createdAt)
                     }))
                 )
@@ -23,9 +24,9 @@ class PostService {
         })
     }
     //create post
-    static insertPost(text){
+    static insertPost(email,name){
         return axios.post(url,{
-            text
+            email, name
         })
     }
 

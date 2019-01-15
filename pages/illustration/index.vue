@@ -8,10 +8,10 @@
 </template>
 
 
-
 <script>
 import Header from '@/components/Header.vue'
 import NavBar from '@/components/NavBar.vue'
+
 export default {
   components: {
     Header, NavBar
@@ -21,15 +21,20 @@ export default {
 
 
 <style scoped>
-  .home-page {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-  .bg {
-    position: relative;
-    min-width: 100vw;
-    min-height: 100vh;
-    box-sizing: border-box;
-  }
+.home-page {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.bg {
+  position: relative;
+  height: 90vh;
+  margin: 3em;
+  box-sizing:border-box;
+  background-image: url('~assets/img/bgg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 </style>
