@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <template>
   <div class="container">
     <b-container fluid>
@@ -177,5 +177,3 @@ font-size:1em;
 }
 </style>
 
-=======
->>>>>>> 17141198ee5426c68b36f38c234c0d0a0646dfb7

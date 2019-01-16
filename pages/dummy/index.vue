@@ -1,0 +1,24 @@
+<template>
+    <html>
+    <head>
+        <title>Homepage</title>
+    </head>
+    <body>
+        <main id="swup" class="transition-fade">
+            <h1>This is homepage</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="/someOtherPage">Go to other page</a>
+        </main>
+    </body>
+</html>
+</template>
+
+<script>
+export default {
+
+}
+</script>
+
+<style>
+
+</style>
