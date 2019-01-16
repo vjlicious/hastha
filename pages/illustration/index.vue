@@ -31,12 +31,5 @@ export default {
     min-width: 100vw;
     min-height: 100vh;
     box-sizing: border-box;
-    background-image: url('~assets/img/illus.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  #holla{
-    color: red;
   }
 </style>
