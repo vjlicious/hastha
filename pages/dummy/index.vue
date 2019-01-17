@@ -1,24 +1,30 @@
-<template>
-    <html>
-    <head>
-        <title>Homepage</title>
-    </head>
-    <body>
-        <main id="swup" class="transition-fade">
-            <h1>This is homepage</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            <a href="/someOtherPage">Go to other page</a>
-        </main>
-    </body>
-</html>
+<template> 
+  <div ref="box" class="box"></div>
 </template>
-
 <script>
+import { TimelineLite, Back } from 'gsap'
 export default {
-
+  mounted() {
+    const { box } = this.$refs
+    const timeline = new TimelineLite()
+    
+    timeline.to(box, 1, {
+      x: 1300,
+      rotation: 0,
+      ease: Back.easeInOut, // Specify an ease
+    })
+    timeline.to(box, 0.5, {
+      background: 'green'
+    },
+    '-=0.5' // Run the animation 0.5s early
+    )
+  }
 }
 </script>
-
-<style>
-
+<style> 
+.box { 
+  height: 60px; 
+  width: 60px; 
+  background: red; 
+}
 </style>

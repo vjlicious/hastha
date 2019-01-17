@@ -1,10 +1,15 @@
 
 <template>
-  <div class="container">
-    <b-container fluid>
-      <div class="has-animation animation-ltr" data-delay="10">
-        <h1 id="h">Internship Admission Form</h1>
-      </div>
+
+<div>
+
+<div>
+  <b-btn v-b-modal.modal1>Launch demo modal</b-btn>
+
+  <!-- Modal Component -->
+  <b-modal id="modal1" class="desc" title="">
+           <b-container fluid>
+     
       <div class="alert alert-info" role="alert">
         <article>
           <p>Hastha Pvt.Ltd. is looking for motivated and highly-skilled passionate architects to join our team of
@@ -29,7 +34,26 @@
         </article>
       </div>
     </b-container>
+    <b-btn v-b-modal.modal-center class="apply">APPLY NOW</b-btn>
+  </b-modal>
+
+</div>
+
+
+
+
+
+
+
+
+  
+
+  <!-- Modal Component -->
+  <b-modal id="modal-center" centered title="">
+           <div class="container">
+    
     <form @submit.prevent="onSave">
+      <h1 id="h">Internship Admission Form</h1>
   <div class="form-group">
     
    <input type="email" class="form-control" id="validationDefault01" placeholder="Enter email"  v-model="fdata.email" required>
@@ -76,27 +100,27 @@
 				<div class="form-check" >
           
 					<label>
-						<input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Linked in</span>
+						<input type="checkbox"  id="Linked in" value="Linked in" v-model="fdata.socio"> <span class="label-text" style="font-size:20px">Linked in</span>
 					</label>
 				</div>
 				<div class="form-check">
 					<label>
-						<input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Facebook</span>
+						<input type="checkbox"  id="Facebook" value="Facebook" v-model="fdata.socio"> <span class="label-text" style="font-size:20px">Facebook</span>
 					</label>
 				</div>
 				<div class="form-check">
 					<label>
-						<input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Twitter</span>
+						<input type="checkbox" id="Twitter" value="Twitter" v-model="fdata.socio"> <span class="label-text" style="font-size:20px">Twitter</span>
 					</label>
 				</div>
 				<div class="form-check">
 					<label>
-						<input type="checkbox" name="check" > <span class="label-text" style="font-size:20px">Instagram</span>
+						<input type="checkbox" id="Instagram" value="Instagram" v-model="fdata.socio"> <span class="label-text" style="font-size:20px">Instagram</span>
 					</label>
 				</div>
         	<div class="form-check">
 					<label>
-						<input type="checkbox" name="check" > <span class="label-text" style="font-size:20px">Others</span>
+						<input type="checkbox" id="others" value="others" v-model="fdata.socio"> <span class="label-text" style="font-size:20px">Others</span>
 					</label>
 				</div>
 			
@@ -114,6 +138,13 @@ v-bind:key="post._id">
 </div>
 
 </div>
+  </b-modal>
+</div>
+
+  
+  
+  
+ 
 </template>
 
 <script>
@@ -135,8 +166,8 @@ import PostService from '@/server/postServices';
                 college:'',
                 year:'',
                 blog:'',
-               why:''
-
+               why:'',
+              socio:[]
 
                 
                 
@@ -174,6 +205,13 @@ font-size:1em;
 .form-check{
  display: table;
  justify-content: center;
+}
+.desc{
+  font-size: 20px;
+  
+}
+.desc .apply{
+  margin-left: 40%;
 }
 </style>
 

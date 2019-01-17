@@ -14,6 +14,7 @@
       <th scope="col">year of addmission</th>
       <th scope="col">blog</th>
       <th scope="col">why hastha</th>
+       <th scope="col">social media</th>
     </tr>
   </thead>
   <tbody>
@@ -31,6 +32,7 @@
       <td>{{postarray[index].year}}</td>
       <td>{{postarray[index].blog}}</td>
       <td>{{postarray[index].why}}</td>
+       <td>{{postarray[index].socio}}</td>
     </tr>
     
   </tbody>
