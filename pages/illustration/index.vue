@@ -1,8 +1,9 @@
 <template>
   <div class="home-page">
-    <div class="bg">
       <Header />
-      <NavBar />
+
+    <div class="bg">
+            <NavBar />
     </div>
   </div>
 </template>
@@ -11,10 +12,11 @@
 <script>
 import Header from '@/components/Header.vue'
 import NavBar from '@/components/NavBar.vue'
+import Banner from '@/components/Banner.vue'
 
 export default {
   components: {
-    Header, NavBar
+    Header, NavBar,Banner
   } 
 }
 </script>

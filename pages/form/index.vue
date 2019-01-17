@@ -28,129 +28,137 @@
         </article>
       </div>
     </b-container>
-<div class="form-group is-valid">
-    
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email:"  required>
-   
-  </div>
-  <div class="form-group">
-   
-    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter name:"  required>
-  </div>
-   <div class="form-group">
-   
-    <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Contact No:"  required>
-  </div>
+    <div class="form-group is-valid">
+
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email:"
+        required>
+
+    </div>
     <div class="form-group">
-    
-    <input type="text" class="form-control" id="inputAddress" placeholder="Address:"  required>
-  </div>
+
+      <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter name:" required>
+    </div>
     <div class="form-group">
-    
-    <input type="text" class="form-control" id="inputAddress" placeholder="College/University"  required>
-  </div>
-     <div class="form-group">
-      <label for="inputEmail4" ><p class="h3">Year of Admission</p></label>
-    <input type="date" class="form-control" id="inputAddress" placeholder="Year of Admission"  required>
-  </div>
-     <div class="form-group">
-     <label for="inputEmail4" ><p class="h3">Do you have a website / blog?:If Yes, please include the link here. If not, leave blank:</p></label>
-    <input type="text" class="form-control" id="inputAddress" placeholder=" "  >
-  </div>
-  
-  <div class="form-group">
-      <label for="inputEmail4" ><p class="h3">Why would you like to work for Hastha?:</p></label>
-    <input type="text" class="form-control" id="inputAddress" placeholder=""  required>
-  </div>
-   
-   
-   
-  <div class="form-group">
 
-     <label for="inputEmail4" ><p class="h3">Which social media you are present in ?:</p></label>
-  
-                 <div class="col-md-4">
-			
-				
-				<div class="form-check" >
-					<label>
-						<input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Linked in</span>
-					</label>
-				</div>
-				<div class="form-check">
-					<label>
-						<input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Facebook</span>
-					</label>
-				</div>
-				<div class="form-check">
-					<label>
-						<input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Twitter</span>
-					</label>
-				</div>
-				<div class="form-check">
-					<label>
-						<input type="checkbox" name="check" > <span class="label-text" style="font-size:20px">Instagram</span>
-					</label>
-				</div>
-        	<div class="form-check">
-					<label>
-						<input type="checkbox" name="check" > <span class="label-text" style="font-size:20px">Others</span>
-					</label>
-				</div>
-			
+      <input type="number" class="form-control" id="exampleInputPassword1" placeholder="Contact No:" required>
+    </div>
+    <div class="form-group">
 
-		</div>
-    
+      <input type="text" class="form-control" id="inputAddress" placeholder="Address:" required>
+    </div>
+    <div class="form-group">
+
+      <input type="text" class="form-control" id="inputAddress" placeholder="College/University" required>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail4">
+        <p class="h3">Year of Admission</p>
+      </label>
+      <input type="date" class="form-control" id="inputAddress" placeholder="Year of Admission" required>
+    </div>
+    <div class="form-group">
+      <label for="inputEmail4">
+        <p class="h3">Do you have a website / blog?:If Yes, please include the link here. If not, leave blank:</p>
+      </label>
+      <input type="text" class="form-control" id="inputAddress" placeholder=" ">
+    </div>
+
+    <div class="form-group">
+      <label for="inputEmail4">
+        <p class="h3">Why would you like to work for Hastha?:</p>
+      </label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="" required>
+    </div>
+
+
+
+    <div class="form-group">
+
+      <label for="inputEmail4">
+        <p class="h3">Which social media you are present in ?:</p>
+      </label>
+
+      <div class="col-md-4">
+
+
+        <div class="form-check">
+          <label>
+            <input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Linked in</span>
+          </label>
+        </div>
+        <div class="form-check">
+          <label>
+            <input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Facebook</span>
+          </label>
+        </div>
+        <div class="form-check">
+          <label>
+            <input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Twitter</span>
+          </label>
+        </div>
+        <div class="form-check">
+          <label>
+            <input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Instagram</span>
+          </label>
+        </div>
+        <div class="form-check">
+          <label>
+            <input type="checkbox" name="check"> <span class="label-text" style="font-size:20px">Others</span>
+          </label>
+        </div>
+
+
+      </div>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+    <div class="post" v-for="(post, index) in posts" v-bind:item="post" v-bind:index="index" v-bind:key="post._id">
+      <p class="text"> {{ post.email }}</p>
+    </div>
+
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-
-<div class="post" v-for="(post, index) in posts"
-v-bind:item = "post"
-v-bind:index = "index"
-v-bind:key="post._id">
-<p class="text"> {{ post.email }}</p> 
-</div>
-
-</div>
 </template>
 
 <script>
-import PostService from '@/server/postServices';
+  import PostService from '@/server/postServices';
   export default {
-    name:'PostComponent',
+    name: 'PostComponent',
     data() {
       return {
-          labels:['Enter Email', 'Enter Name', 'Enter Address'],
-          types:['text', 'text', 'text'],
-          posts: [],
-          error: '',
-          email: '',
-          name: ''
+        labels: ['Enter Email', 'Enter Name', 'Enter Address'],
+        types: ['text', 'text', 'text'],
+        posts: [],
+        error: '',
+        email: '',
+        name: ''
       }
     },
-      async created() {
-          try {
-              this.posts = await PostService.getPosts();
-          } catch(err){
-              this.error = err.message;
-          }
+    async created() {
+      try {
+        this.posts = await PostService.getPosts();
+      } catch (err) {
+        this.error = err.message;
+      }
     },
     methods: {
-        async createPost() {
-            await PostService.insertPost(this.email,this.name);
-            this.posts = await PostService.getPosts();
-        }
+      async createPost() {
+        await PostService.insertPost(this.email, this.name);
+        this.posts = await PostService.getPosts();
+      }
     }
   }
+
 </script>
 <style scoped>
-.container{
+  .container {
     text-align: center;
     font-size: 1.8em;
-}
-.alert{
-    padding:2em;
-    text-align: justify;
-}
-</style>
+  }
 
+  .alert {
+    padding: 2em;
+    text-align: justify;
+  }
+
+</style>

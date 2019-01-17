@@ -10,8 +10,8 @@
 <style scoped>
   .logo{
     position: absolute;
+    z-index:1;
     top:8%;
     left:5%;
-
   }
 </style>
