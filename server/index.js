@@ -2,24 +2,9 @@ const express = require('express') //backend node frame
 const consola = require('consola') //console logger
 const { Nuxt, Builder } = require('nuxt')
 
-const bodyParser = require('body-parser')//body parser for express
-const cors = require('cors') //cross origin resource sharing
-
 //declare the express server 
 const app = express()
 
-//declare our dbserver
-function dbserver() {
-  const dbport = process.env.PORT || 5000
-  app.set('dbport',dbport) 
-  app.use(bodyParser.json())
-  app.use(cors())
-  const posts = require('./routes/api/posts')
-  app.use('/api/posts', posts)
-  app.listen(dbport, () => console.log(`Server started on port ${dbport}`))
-}
-
-dbserver()
 
 //nuxt server
 const host = process.env.HOST || '127.0.0.1'
