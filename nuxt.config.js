@@ -2,11 +2,25 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'universal',
-
   /*
   ** Headers of the page
   */
   head: {
+    head() {
+      return {
+        script: [
+          { src: 'gsap/TweenMax.min.js' },
+          { src: 'gsap/TweenLite.min.js' },
+          { src: 'gsap/TimelineLite.min.js' },
+          { src: 'gsap/TimelineMax.min.js' },
+          { src: 'gsap/SplitText.min.js' },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js' },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js' },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js' },
+          { src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js' }
+        ]
+      }
+    },
     title: pkg.name,
     meta: [
       { charset: 'utf-8' },
@@ -29,15 +43,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [
-  ],
-
-  /*
-  ** Plugins to load before mounting the App
-  */
-  plugins: [
-  ],
-
+  css: [],
   /*
   ** Nuxt.js modules
   */
@@ -58,11 +64,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    vendor: ['scrollmagic'],
+  },
     /*
-    ** You can extend webpack config here
-    */
-    extend(config, ctx) {
-      
-    }
-  }
+  ** Plugins to load before mounting the App
+  */
+ plugins: [{ src: '~/plugins/scrollmagic.js', ssr: false }
+],
 }
