@@ -2,7 +2,7 @@ import axios from 'axios';
 import { async } from "q";
 import { createContext } from "vm";
 
-const url = 'http://localhost:5000/api/posts/';
+const url = 'https://hastha-123.firebaseio.com/posts.json';
 
 class PostService {
     //get posts
@@ -26,7 +26,11 @@ class PostService {
     //create post
     static insertPost(email,name){
         return axios.post(url,{
+<<<<<<< HEAD
             email, name
+=======
+            email,name
+>>>>>>> 6dd4f8d7b479b168e6a24ae9f325eb7a4f0ee909
         })
     }
 
