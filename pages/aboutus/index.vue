@@ -1,6 +1,8 @@
 <template>
   <div class="au">
-    <Header />
+    <div class="logo">
+        <img src="~/assets/img/logo.png" width="100%" height="100%">
+      </div>
     <div class="bg">
       <NavBar />
       <h1 class="heading h_as">ABOUT US</h1>
@@ -22,7 +24,7 @@
         </h1>
       </div>
       <div class="img_s">
-        <img src="@/assets/img/sa.jpg" alt="@/assets/img/sa.jpg">
+        <img class="img" src="@/assets/img/sa.jpg" alt="@/assets/img/sa.jpg">
       </div>
       <div class="intro i_sir">
         <p class="content">
@@ -38,11 +40,9 @@
   </div>
 </template>
 <script>
-  import Header from '@/components/Header.vue'
   import NavBar from '@/components/NavBar.vue'
   export default {
     components: {
-      Header,
       NavBar
     }
   }
@@ -51,18 +51,27 @@
   .au {
     position: relative;
   }
-
+   .logo{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    position:absolute;
+    z-index:1;
+    top:4.5%;
+    left:5%;
+  }
   .bg {
-    height: 90vh;
+    height: 93vh;
     margin: 3em;
+    padding: 2em;
     box-sizing: border-box;
     background-image: linear-gradient(to right bottom, rgba(180, 180, 180, 0.2), rgba(116, 116, 116, 0)), url('~assets/img/bgg.jpg');
-    background-position: center;
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+    box-shadow: 0 10px 10px 3px  #535353b6;
   }
-
   .heading {
     position: absolute;
     font-size: 6em;
@@ -106,8 +115,7 @@
     top: 68%;
     left: 10%;
   }
-
-  img {
+  .img{
     width: 300px;
     height: 300px;
   }

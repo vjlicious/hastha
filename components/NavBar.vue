@@ -6,18 +6,16 @@
         <nuxt-link class="items" to='/contactus'>CONTACT US</nuxt-link>
     </nav>
 </template>
-<script>
-
-export default {
-    
-}
-</script>
 <style scoped>
   .navbar {
+    padding:0;
+    margin:0;
+    position: sticky;
+    box-sizing: border-box;
     display: flex;
     align-content:center;
     justify-content: space-around;
-    position: static;
+
   }
   .items {
         text-decoration:none;

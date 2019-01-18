@@ -1,6 +1,8 @@
 <template>
 <div class="cu">
-    <Header />
+<div class="logo">
+        <img src="~/assets/img/logo.png" width="100%" height="100%">
+      </div>
     <div class="bg">
       <NavBar />
       </div>
@@ -8,26 +10,34 @@
     
 </template>
 <script>
-import Header from '@/components/Header.vue'
 import NavBar from '@/components/NavBar.vue'
   export default {
     components: {
-      Header,
       NavBar
     }
 }
 </script>
 <style scoped>
+.logo{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    position:absolute;
+    z-index:1;
+    top:5%;
+    left:5%;
+  }
   .bg {
     height: 90vh;
     margin: 3em;
-    box-sizing: border-box;
-    background-image: linear-gradient(to right bottom, rgba(180, 180, 180, 0.2), rgba(116, 116, 116, 0)), url('~assets/img/bgg.jpg');
-    background-position: center;
+    padding: 2em;
+    box-sizing:border-box;
+    background-image: url('~assets/img/bg.jpg');
+    background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-    overflow:hidden;
+    box-shadow: 0 10px 10px 3px  #535353b6;
   }
 </style>
 

@@ -3,13 +3,8 @@
     <nuxt/>
   </div>
 </template>
-<script>
-export default {
-
-}
-    
+<script>    
 </script>
-
 <style>
 *,
 *::before,
@@ -23,11 +18,10 @@ html{
   font-size: 62.5%;
 }
 body{
-    width: 100vw;
-    height: 100vh;
     color: #3C3C3C;
     font-weight: 300;
-    line-height: 1.6
+    line-height: 1.6;
+    background-color:rgb(177, 177, 177);
 }
 </style>
 
