@@ -18,8 +18,9 @@ html{
   font-size: 62.5%;
 }
 body{
+    font-family: 'Roboto', sans-serif;
     color: #3C3C3C;
-    font-weight: 300;
+    font-weight: 100;
     line-height: 1.6;
     background-color:rgb(177, 177, 177);
 }

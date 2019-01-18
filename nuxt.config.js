@@ -24,10 +24,11 @@ module.exports = {
     ],
     link: [
       { ref:'icon', type: 'image/x-icon', href:'/favicon.ico'},
-      { rel:"stylesheet", type:'text/css', href:"https://fonts.googleapis.com/css?family=Raleway:100,300,400,700|Roboto+Slab:100,300,400,700"},
-      { href:"https://fonts.googleapis.com/css?family=Quicksand:300,400,500", rel:"stylesheet"},
+      { rel:"stylesheet", type:'text/css', href:"https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700"},
+      { href:"https://fonts.googleapis.com/css?family=Quicksand:100,300,400,500", rel:"stylesheet", type:'text/css'},
       { href:"https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js", rel:"text/javascript"}, 
-      { href:'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js',rel:"text/javascript"}
+      { href:'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js',rel:"text/javascript"},
+      { href:"https://fonts.googleapis.com/css?family=Roboto:100,300,400", rel:"stylesheet"}
 
     ]
   },

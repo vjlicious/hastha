@@ -1,36 +1,60 @@
 <template>
   <div class="il">
- <div class="logo">
-        <img src="~/assets/img/logo.png" width="100%" height="100%">
-  </div>
+    <div class="logo">
+      <img src="~/assets/img/logo.png" width="100%" height="100%">
+    </div>
     <div class="bg">
       <NavBar />
-          <h1 class="heading h_vis">Vision</h1><br><br>
-          <div class="intro i_vis">
-          <p class="content">• Creating vertical financial growth and horizontal spread across the country.<br>
-            • To create a common platform for architects, Planners, Engineers, Interior designers, Developers, and also
-            for immovable property valuer, dealers, consultants, legal advisers and execute turnkey project execution.<br>
-            • To integrate the technical education with real estate industry.<br>
-            • To incubate the innovative startups on real estate platform.<br>
-            • Eventually, turn the company under the public holding format.<br>
-            • To make company turnover of 333 crore in next 7 years.<br>
-            • To sell building like a car.<br>
-          </p>
-          </div>
-        </div>
-      <div class="bg holla">
-          <h1 class="heading h_strat">Strategic Objective</h1><br><br>
-          <div class="intro i_strat">
-          <p class="content">• To provide training and internship for minimum 200 students every year and to create an
-            opportunity to
-            work on live projects.<br>
-            • To create opportunities for other disciplines having interdependence on real estate industry.<br>
-            • To prepare and provide code of AI in all domains of real estate industry.<br>
-            • To prepare and write general guidelines for real estate industries which should streamline the
-            unorganized sector.<br>
-          </p>
-        </div>
+      <h1 class="heading h_vis">VISION</h1><br><br>
+      <div class="intro i_vis">
+        <p class="content">• Creating vertical financial growth and horizontal spread across the country.<br>
+          • To create a common platform for architects, Planners, Engineers, Interior designers, Developers, and also
+          for immovable property valuer, dealers, consultants, legal advisers and execute turnkey project execution.<br>
+          • To integrate the technical education with real estate industry.<br>
+          • To incubate the innovative startups on real estate platform.<br>
+          • Eventually, turn the company under the public holding format.<br>
+          • To make company turnover of 333 crore in next 7 years.<br>
+          • To sell building like a car.<br>
+        </p>
       </div>
+    </div>
+    <div class="bg holla">
+      <h1 class="heading h_strat">STRATEGIC OBJECTIVE</h1><br><br>
+      <div class="intro i_strat">
+        <p class="content">• To provide training and internship for minimum 200 students every year and to create an
+          opportunity to work on live projects.<br>
+          • To create opportunities for other disciplines having interdependence on real estate industry.<br>
+          • To prepare and provide code of AI in all domains of real estate industry.<br>
+          • To prepare and write general guidelines for real estate industries which should streamline the
+          unorganized sector.<br>
+        </p>
+      </div>
+    </div>
+    <div class="bg">
+      <h1 class="heading h_vis">ACCOMPLISHMENTS</h1><br><br>
+      <div class="intro content i_vis">
+        <ul>
+          <li>Pioneer in field of construction of GFRG/ RapidWall Buildings</li>
+          <li>Demonstrated the capability of GFRG based house by creating first ever house in India, for residential
+            purpose at Rajeevnagar, Manipal</li>
+          <li>Designed and constructed more than 100 RapidWall buildings across India</li>
+          <li>Undergone training from experts at IIT Madras & RBS India</li>
+          <li>Recently built 40 RapidWall affordable housing society at Nellore, in AP State for BMTPC, Govt of India
+            (Ministry of Housing and Poverty alleviation),New Delhi.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bg">
+      <h1 class="heading h_as">ACCOMPLISHMENTS</h1><br><br>
+      <div class="intro i_as content ">
+        <ul>
+          <li>Ongoing projects are Office Building for Kerala State Electricity Board, Kerala, Villas for Ayurvedic Hospital in Coorg and multiple house constructions for individuals</li>
+          <li>Demonstrated the capability of GFRG based house by creating first ever house in India, for residential
+            purpose at Rajeevnagar, Manipal</li>
+          <li>Highly specialized workshops were conducted for Professional architects, structural engineers and construction engineers of consultants firm/ construction companies or builders or real estate developers to get an exposure on GFRG construction.</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -45,15 +69,17 @@
   .il {
     position: relative;
   }
-    .logo{
-    padding:0;
-    margin:0;
+
+  .logo {
+    position: absolute;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    position:absolute;
-    z-index:1;
-    top:5%;
-    left:5%;
+    z-index: 1;
+    top: 2%;
+    left: 5%;
   }
+
   .bg {
     height: 93vh;
     margin: 3em;
@@ -64,39 +90,66 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-    box-shadow: 0 10px 10px 3px  #535353b6;
-
+    box-shadow: 0 10px 10px 3px #535353b6;
   }
+
   .heading {
-    position: absolute;
+    position: relative;
     font-size: 6em;
     padding-left: 0.2em;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
+    width: 55%;
   }
-  .h_vis{
-    top: 10%;
+
+  .h_vis {
+    top: 18%;
     left: 10%;
   }
-  .h_strat{
-    top: 60%;
-    right: 10%;
+
+  .h_strat {
+    top: 20%;
+    left: 40%;
   }
-  .intro{
-    position: absolute;
+
+  .h_as {
+    top: 10%;
+    left: 40%;
+  }
+  .i_as {
+    top: 0%;
+    left: 70%;
+  }
+
+  .intro {
+    position: relative;
     background-color: white;
     width: 50%;
     box-sizing: border-box;
     padding: 3em;
   }
-  .i_vis{
-    top: 18%;
+
+  .i_vis {
+    top: 15%;
     left: 10%;
   }
-  .i_strat{
-    top: 70%;
+
+  .i_strat {
+    top: 20%;
     left: 40%;
   }
-  .content {
-    font-size: 1.8em;
+
+  .i_as {
+    top: 15%;
+    left: 10%;
+
   }
 
+  .content {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6em;
+    font-weight: 100;
+    text-justify: auto;
+    text-align: left;
+  }
 </style>
