@@ -48,20 +48,45 @@
       <h1 class="heading h_as">ACCOMPLISHMENTS</h1><br><br>
       <div class="intro i_as content ">
         <ul>
-          <li>Ongoing projects are Office Building for Kerala State Electricity Board, Kerala, Villas for Ayurvedic Hospital in Coorg and multiple house constructions for individuals</li>
+          <li>Ongoing projects are Office Building for Kerala State Electricity Board, Kerala, Villas for Ayurvedic
+            Hospital in Coorg and multiple house constructions for individuals</li>
           <li>Demonstrated the capability of GFRG based house by creating first ever house in India, for residential
             purpose at Rajeevnagar, Manipal</li>
-          <li>Highly specialized workshops were conducted for Professional architects, structural engineers and construction engineers of consultants firm/ construction companies or builders or real estate developers to get an exposure on GFRG construction.</li>
+          <li>Highly specialized workshops were conducted for Professional architects, structural engineers and
+            construction engineers of consultants firm/ construction companies or builders or real estate developers to
+            get an exposure on GFRG construction.</li>
         </ul>
+      </div>
+    </div>
+    <div class="bg footer">
+      <div class="foot_items">
+        <div class="foot links">
+          <nav class="navbar">
+            <nuxt-link class="items" to='/services'>SERVICES</nuxt-link>
+            <nuxt-link class="items" to='/projects'>PROJECTS</nuxt-link>
+            <nuxt-link class="items" to='/aboutus'>ABOUT US</nuxt-link>
+            <nuxt-link class="items" to='/contactus'>CONTACT US</nuxt-link>
+          </nav>
+        </div>
+        <div class="foot copyright">
+          ©2018 by Hastha - Alternate Building Technology and Research Pvt Ltd.
+        </div>
+        <div class="foot address">
+          Hastha Alternate Building Technology & Research Pvt Ltd
+          +91 98-86-456000.
+          # 287/A, 7 A Main Road, HRBR Layout,1st Block,
+          Subbaiahnapalya, Banaswadi, Bengaluru, Karnataka - 560 043
+        </div>
       </div>
     </div>
   </div>
 </template>
 <script>
   import NavBar from '@/components/NavBar.vue'
+  import Banner from '@/components/Banner.vue'
   export default {
     components: {
-      NavBar
+      NavBar,Banner
     }
   }
 </script>
@@ -116,6 +141,7 @@
     top: 10%;
     left: 40%;
   }
+
   .i_as {
     top: 0%;
     left: 70%;
@@ -152,4 +178,21 @@
     text-justify: auto;
     text-align: left;
   }
+
+  .foot_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: space-between;
+  }
+  .foot{
+    width:50%;
+
+  }
+  .items{
+    display:flex;
+
+
+  }
+
 </style>

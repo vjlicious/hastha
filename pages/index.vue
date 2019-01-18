@@ -13,6 +13,10 @@
         </div>
       </div>
       <div class="content-right">
+        <div class="banner">
+             <Banner />
+        </div>
+
         <h2>
           <nuxt-link id='gs1' to='/illustration'>GET STARTED</nuxt-link>
         </h2>
@@ -22,9 +26,10 @@
 </template>
 <script>
   import NavBar from '@/components/NavBar.vue'
+  import Banner from '@/components/Banner.vue'
   export default {
     components: {
-      NavBar
+      NavBar,Banner
     }
   }
 </script>
@@ -94,5 +99,10 @@
     margin:0;
     padding:0;
     font-family: 'Quicksand', sans-serif;
+  }
+  .banner{
+    position: absolute;
+    bottom:800%;
+    right:0%;
   }
 </style>

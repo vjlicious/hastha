@@ -1,8 +1,6 @@
 <template>
     <div class="post-page">
         <div>
-          
-         
          <table class="table table-bordered table-dark">
   <thead>
     <tr>
@@ -72,14 +70,12 @@ created() {
 .catch(e => context.error(e));
 
 },
-
 }
 </script>
 
 <style scoped>
 .table-dark{
 font-size: 20px;
-
 }
 </style>
 

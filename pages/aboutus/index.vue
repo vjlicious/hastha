@@ -76,6 +76,8 @@
     position: absolute;
     font-size: 6em;
     padding-left: 0.2em;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 100;
   }
 
   .h_as {
@@ -107,7 +109,11 @@
   }
 
   .content {
-    font-size: 1.8em;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.6em;
+    font-weight: 100;
+    text-justify: auto;
+    text-align: left;
   }
 
   .img_s {
