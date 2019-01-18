@@ -1,0 +1,39 @@
+  import { TimelineLite, TimelineMax} from 'gsap'
+  import TweenMax from 'gsap'
+
+
+  let ScrollMagic;
+  if(process.browser){
+    ScrollMagic = require('scrollmagic');
+  }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    mounted(){
+
+      const tl = new TimelineMax()
+      const tl2 = new TimelineMax()
+      const controller = new ScrollMagic.Controller()
+      tl.from(".vision", 1,{
+        opacity:1,
+      })
+      tl.to(".vision", 2,{
+        opacity:0
+      })
+      tl.from(".strat", 3,{
+        opacity:0,
+      })
+      const scene = new ScrollMagic.Scene({
+        triggerElement: ".bg",
+        triggerHook: "onLeave",
+      })
+      .setPin(".vm")
+      .setTween(tl)
+      .addTo(controller)
+    }

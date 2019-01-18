@@ -3,10 +3,8 @@
     <Header />
     <div class="bg">
       <NavBar />
-      <div class="heading__container">
-        <h1 class="heading">ABOUT US</h1>
-      </div>
-      <div class="intro">
+      <h1 class="heading h_as">ABOUT US</h1>
+      <div class="intro i_as">
         <p class="content">
           Hastha Alternate Building Technology & Research Private Limited, is an innovative company that is
           constantly
@@ -19,14 +17,14 @@
     </div>
     <div class="bg holla">
       <div class="sirhead__container">
-        <h1 class="heading sir">
+        <h1 class="heading h_sir">
           Sudhir Acharya
         </h1>
       </div>
       <div class="img_s">
-          <img src="@/assets/img/sa.jpg" alt="@/assets/img/sa.jpg">
+        <img src="@/assets/img/sa.jpg" alt="@/assets/img/sa.jpg">
       </div>
-      <div class="intro sir_i">
+      <div class="intro i_sir">
         <p class="content">
           Sudhir Acharya is a result oriented professional engineer with close to two decades of experience in
           construction as well as in the architecture field in India and Middle East. He is well experienced in
@@ -46,12 +44,9 @@
     components: {
       Header,
       NavBar
-    },
-
+    }
   }
-
 </script>
-
 <style scoped>
   .au {
     position: relative;
@@ -70,48 +65,50 @@
 
   .heading {
     position: absolute;
-    top: 15%;
-    left: 10%;
     font-size: 6em;
     padding-left: 0.2em;
+  }
+
+  .h_as {
+    top: 15%;
+    left: 10%;
+  }
+
+  .h_sir {
+    top: 60%;
+    left: 10%;
   }
 
   .intro {
     position: absolute;
     background-color: white;
     width: 50%;
-    top: 22%;
-    left: 10%;
     box-sizing: border-box;
     padding: 3em;
   }
 
+  .i_as {
+    top: 22%;
+    left: 10%;
+  }
+
+  .i_sir {
+    top: 75%;
+    left: 40%;
+  }
+
   .content {
     font-size: 1.8em;
-    opacity: 1;
   }
 
-  .sirintro {
+  .img_s {
     position: absolute;
-    background-color: white;
-    width: 50%;
-  }
-  .sir{
-      top:60%;
-      right:10%;
-  }
-  .sir_i{
-      top:75%;
-      left:40%;
-  }
-  .img_s{
-      position: absolute;
-      top:68%;
-      left:10%;
-  }
-  img{
-      width:300px;
-      height:300px;
+    top: 68%;
+    left: 10%;
   }
 
+  img {
+    width: 300px;
+    height: 300px;
+  }
 </style>

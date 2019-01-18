@@ -1,12 +1,11 @@
 <template>
-  <div class="home-page">
+  <div class="il">
     <Header />
     <div class="bg">
       <NavBar />
-      <div class="container vm">
-        <div ref="vis" class="content vision">
-          <h1 class="heading">Vision</h1><br><br>
-          <p class="one">• Creating vertical financial growth and horizontal spread across the country.<br>
+          <h1 class="heading h_vis">Vision</h1><br><br>
+          <div class="intro i_vis">
+          <p class="content">• Creating vertical financial growth and horizontal spread across the country.<br>
             • To create a common platform for architects, Planners, Engineers, Interior designers, Developers, and also
             for immovable property valuer, dealers, consultants, legal advisers and execute turnkey project execution.<br>
             • To integrate the technical education with real estate industry.<br>
@@ -15,10 +14,13 @@
             • To make company turnover of 333 crore in next 7 years.<br>
             • To sell building like a car.<br>
           </p>
+          </div>
         </div>
-        <div class="content strat" ref="stat" >
-          <h1 id="heading">Strategic Objective</h1><br><br>
-          <p>• To provide training and internship for minimum 200 students every year and to create an opportunity to
+      <div class="bg holla">
+          <h1 class="heading h_strat">Strategic Objective</h1><br><br>
+          <div class="intro i_strat">
+          <p class="content">• To provide training and internship for minimum 200 students every year and to create an
+            opportunity to
             work on live projects.<br>
             • To create opportunities for other disciplines having interdependence on real estate industry.<br>
             • To prepare and provide code of AI in all domains of real estate industry.<br>
@@ -26,66 +28,23 @@
             unorganized sector.<br>
           </p>
         </div>
-        </div>
       </div>
-    </div>
+  </div>
 </template>
-
-
 <script>
   import Header from '@/components/Header.vue'
   import NavBar from '@/components/NavBar.vue'
-  import Banner from '@/components/Banner.vue'
-
-
-  import { TimelineLite, TimelineMax} from 'gsap'
-  import TweenMax from 'gsap'
-
-
-  let ScrollMagic;
-  if(process.browser){
-    ScrollMagic = require('scrollmagic');
-  }
-  
-
   export default {
     components: {
       Header,
       NavBar
-    },
-    mounted(){
-
-      const tl = new TimelineMax()
-      const tl2 = new TimelineMax()
-      const controller = new ScrollMagic.Controller()
-      tl.from(".vision", 1,{
-        opacity:1,
-      })
-      tl.to(".vision", 2,{
-        opacity:0
-      })
-      tl.from(".strat", 3,{
-        opacity:0,
-      })
-      const scene = new ScrollMagic.Scene({
-        triggerElement: ".bg",
-        triggerHook: "onLeave",
-      })
-      .setPin(".vm")
-      .setTween(tl)
-      .addTo(controller)
     }
-
-}
-</script>
-
-
-<style scoped>
-  .home-page {
-    min-height: 100vh;
-    overflow:hidden;
   }
-
+</script>
+<style scoped>
+  .il {
+    position: relative;
+  }
   .bg {
     height: 90vh;
     margin: 3em;
@@ -95,37 +54,37 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
-    overflow:hidden;
   }
-  .vm {
+  .heading {
     position: absolute;
-    left: 80px;
-    top: 180px;
-    width: 600px;
-    height: 380px;
-    background-color: rgba(255, 255, 255, 0.671);
+    font-size: 6em;
+    padding-left: 0.2em;
   }
-  .content{
-    padding: 3em;
-    padding-bottom: 1em;
+  .h_vis{
+    top: 10%;
+    left: 10%;
+  }
+  .h_strat{
+    top: 60%;
+    right: 10%;
+  }
+  .intro{
+    position: absolute;
+    background-color: white;
+    width: 50%;
     box-sizing: border-box;
-
+    padding: 3em;
   }
-
-  #heading {
-    font-size: 4em;
+  .i_vis{
+    top: 18%;
+    left: 10%;
   }
-
-  p {
-    font-size: 1.6em;
+  .i_strat{
+    top: 70%;
+    left: 40%;
   }
-  .vison{
-    position: absolute;
-    z-index:1;
-  }
-  .strat{
-    position: absolute;
-    z-index: 2;
+  .content {
+    font-size: 1.8em;
   }
 
 </style>
