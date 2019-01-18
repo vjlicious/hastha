@@ -51,22 +51,24 @@
   export default {
     components: {
       Header,
-      NavBar,
-      Banner
+      NavBar
     },
     mounted(){
+
       const tl = new TimelineMax()
       const tl2 = new TimelineMax()
       const controller = new ScrollMagic.Controller()
-      tl.to(".vision", 1,{
+      tl.from(".vision", 1,{
+        opacity:1,
+      })
+      tl.to(".vision", 2,{
         opacity:0
       })
-      tl.from(".strat", 2,{
+      tl.from(".strat", 3,{
         opacity:0,
-        y:100
       })
       const scene = new ScrollMagic.Scene({
-        triggerElement: ".heading",
+        triggerElement: ".bg",
         triggerHook: "onLeave",
       })
       .setPin(".vm")
@@ -107,6 +109,7 @@
     padding: 3em;
     padding-bottom: 1em;
     box-sizing: border-box;
+
   }
 
   #heading {
@@ -115,6 +118,14 @@
 
   p {
     font-size: 1.6em;
+  }
+  .vison{
+    position: absolute;
+    z-index:1;
+  }
+  .strat{
+    position: absolute;
+    z-index: 2;
   }
 
 </style>

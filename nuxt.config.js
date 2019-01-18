@@ -9,11 +9,6 @@ module.exports = {
     head() {
       return {
         script: [
-          { src: 'gsap/TweenMax.min.js' },
-          { src: 'gsap/TweenLite.min.js' },
-          { src: 'gsap/TimelineLite.min.js' },
-          { src: 'gsap/TimelineMax.min.js' },
-          { src: 'gsap/SplitText.min.js' },
           { src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js' },
           { src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js' },
           { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js' },
@@ -30,7 +25,9 @@ module.exports = {
     link: [
       { ref:'icon', type: 'image/x-icon', href:'/favicon.ico'},
       { rel:"stylesheet", type:'text/css', href:"https://fonts.googleapis.com/css?family=Raleway:100,300,400,700|Roboto+Slab:100,300,400,700"},
-      { href:"https://fonts.googleapis.com/css?family=Quicksand:300,400,500", rel:"stylesheet"}
+      { href:"https://fonts.googleapis.com/css?family=Quicksand:300,400,500", rel:"stylesheet"},
+      { href:"https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js", rel:"text/javascript"}, 
+      { href:'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js',rel:"text/javascript"}
 
     ]
   },

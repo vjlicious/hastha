@@ -17,6 +17,7 @@ export default {
     display: flex;
     align-content:center;
     justify-content: space-around;
+    position: static;
   }
   .items {
         text-decoration:none;
