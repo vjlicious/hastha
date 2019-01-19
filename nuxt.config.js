@@ -6,16 +6,6 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    head() {
-      return {
-        script: [
-          { src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js' },
-          { src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js' },
-          { src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js' },
-          { src: 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js' }
-        ]
-      }
-    },
     title: pkg.name,
     meta: [
       { charset: 'utf-8' },
@@ -62,8 +52,8 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    vendor: ['scrollmagic'],
-  },
+      vendor: ['scrollmagic'],
+},
     /*
   ** Plugins to load before mounting the App
   */

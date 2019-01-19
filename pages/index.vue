@@ -30,6 +30,9 @@
   export default {
     components: {
       NavBar,Banner
+    },
+    mounted(){
+      console.log()
     }
   }
 </script>
