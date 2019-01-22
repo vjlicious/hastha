@@ -1,7 +1,5 @@
 <template>
   <div class="hp">
-
-
     <div class="logo">
       <img src="~/assets/img/logo.png" width="100%" height="100%">
     </div>
@@ -25,15 +23,10 @@
   </div>
 </template>
 <script>
-
   import NavBar from '@/components/NavBar.vue'
-
-
   export default {
-
     components: {
       NavBar
-
 }
 }
 </script>
@@ -57,7 +50,7 @@
   }
 
   .bg {
-    height: 90vh;
+    height: 93vh;
     margin: 3em;
     padding: 2em;
     box-sizing: border-box;
@@ -105,8 +98,5 @@
     padding:0;
     font-family: 'Quicksand', sans-serif;
   }
-.video{
-  padding:0;
-  margin:0;
-}
+
 </style>

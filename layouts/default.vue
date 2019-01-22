@@ -16,8 +16,6 @@
 html{
   box-sizing: border-box;
   font-size: 62.5%;
-  overflow-x: visible;
-  overflow-y:hidden;
 }
 body{
     font-family: 'Roboto', sans-serif;

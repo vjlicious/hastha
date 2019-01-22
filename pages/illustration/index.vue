@@ -41,7 +41,6 @@
 </template>
 <script>
   import NavBar from '@/components/NavBar.vue'
-
   export default {
     components: {
       NavBar
@@ -51,7 +50,6 @@
 </script>
 <style scoped>
   .il {
-    max-width: 100%;
     position: relative;
   }
 
@@ -115,7 +113,7 @@
   }
     #gs1 {
     position: absolute;
-    top: 85%;
+    top: 90%;
     left: 82%;
     font-family: 'Quicksand', sans-serif;
     text-decoration: none;
