@@ -34,38 +34,14 @@
         </div>
       </div>
     </div>
-
-    <div class="bg footer">
-      <div class="foot_items">
-        <div class="foot links">
-          <nav class="navbar">
-            <nuxt-link class="items" to='/services'>SERVICES</nuxt-link>
-            <nuxt-link class="items" to='/projects'>PROJECTS</nuxt-link>
-            <nuxt-link class="items" to='/aboutus'>ABOUT US</nuxt-link>
-            <nuxt-link class="items" to='/contactus'>CONTACT US</nuxt-link>
-          </nav>
-        </div>
-        <div class="foot copyright">
-          ©2018 by Hastha - Alternate Building Technology and Research Pvt Ltd.
-        </div>
-        <div class="foot address">
-          Hastha Alternate Building Technology & Research Pvt Ltd
-          +91 98-86-456000.
-          # 287/A, 7 A Main Road, HRBR Layout,1st Block,
-          Subbaiahnapalya, Banaswadi, Bengaluru, Karnataka - 560 043
-        </div>
-      </div>
-    </div>
   </div>
 </template>
 <script>
   import NavBar from '@/components/NavBar.vue'
-  import Banner from '@/components/Banner.vue'
 
   export default {
     components: {
-      NavBar,
-      Banner
+      NavBar
     }
   }
 
@@ -97,23 +73,13 @@
     z-index: -1;
     box-shadow: 0 10px 10px 3px #535353b6;
   }
-
-  .heading {
-    position: relative;
-    font-size: 6em;
-    padding-left: 0.2em;
-    font-family: 'Roboto Slab', serif;
-    font-weight: 100;
-    text-align: center;
-  }
-
-
-  .intro {
-    position: relative;
-    background-color: white;
-    box-sizing: border-box;
-    padding: 3em;
+  .container {
     width:100%;
+    display: flex;
+    justify-items: center;
+    align-content: space-around;
+    padding:2em;
+    padding-top: 6em;
   }
   .item1{
     width:50%;
@@ -123,37 +89,35 @@
     width:50%;
     margin:1em;
   }
-
-  .container {
+  .heading {
+    position: relative;
+    font-size: 6em;
+    padding-left: 0.2em;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    text-align: center;
+  }
+  .intro {
+    position: relative;
+    box-sizing: border-box;
+    padding: 2em;
     width:100%;
-    display: flex;
-    justify-items: center;
-    align-content: space-around;
-    padding:3em;
   }
 
   .content {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6em;
-    font-weight: 100;
-    text-justify: auto;
-    text-align: left;
+    font-weight: 300;
+    text-justify: center;
   }
 
-  .foot_items {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: space-between;
+  .page-enter-active, .page-leave-active{
+    transition: all .30s ease-out;
+  }
+  .page-enter, .page-leave-active{
+    opacity: 0;
+    transform-origin:50% 50%;
   }
 
-  .foot {
-    width: 50%;
-
-  }
-
-  .items {
-    display: flex;
-  }
 
 </style>
