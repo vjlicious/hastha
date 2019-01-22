@@ -3,7 +3,7 @@
     <nuxt/>
   </div>
 </template>
-<script>    
+<script>     
 </script>
 <style>
 *,
@@ -11,7 +11,7 @@
 *::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit
+    box-sizing: inherit;
 }
 html{
   box-sizing: border-box;
@@ -25,7 +25,21 @@ body{
     font-weight: 100;
     line-height: 1.6;
     background-color:rgb(177, 177, 177);
+    word-spacing: 1px;
+    line-height: 1.2;
 }
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.25s ease;
+}
+
+.page-enter,
+.page-leave-active {
+  opacity: 0;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
 </style>
 
 

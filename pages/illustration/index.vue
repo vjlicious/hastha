@@ -7,7 +7,7 @@
       <NavBar />
       <div class="container">
         <div class="item1">
-          <h1 class="heading h_vis">VISION</h1><br><br>
+          <h1 class="heading h_vis">VISION</h1>
           <section class="intro content i_vis">
             <div class="vision">
               To provide training and internship for minimum 200 students every year and to create an
@@ -22,7 +22,7 @@
           </section>
         </div>
         <div class="item2">
-          <h1 class="heading h_strat">OBJECTIVE</h1><br><br>
+          <h1 class="heading h_strat">OBJECTIVE</h1>
           <section class="intro content i_strat">
             <div class="strat">Creating vertical financial growth and horizontal spread across the country.</div>
             <div class="strat">To create a common platform for architects, Planners, Engineers, Interior designers, Developers, and also
@@ -33,6 +33,9 @@
           </section>
         </div>
       </div>
+          <h2>
+          <nuxt-link id='gs1' to='/accolades'>ACCOLADES</nuxt-link>
+        </h2>
     </div>
   </div>
 </template>
@@ -48,6 +51,7 @@
 </script>
 <style scoped>
   .il {
+    max-width: 100%;
     position: relative;
   }
 
@@ -77,7 +81,7 @@
     width:100%;
     display: flex;
     justify-items: center;
-    align-content: space-around;
+    align-content: space-between;
     padding:2em;
     padding-top: 6em;
   }
@@ -103,20 +107,20 @@
     padding: 2em;
     width:100%;
   }
-
   .content {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6em;
     font-weight: 300;
     text-justify: center;
   }
-
-  .page-enter-active, .page-leave-active{
-    transition: all .30s ease-out;
-  }
-  .page-enter, .page-leave-active{
-    opacity: 0;
-    transform-origin:50% 50%;
+    #gs1 {
+    position: absolute;
+    top: 85%;
+    left: 82%;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+    font-weight: 100;
   }
 
 

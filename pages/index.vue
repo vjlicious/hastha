@@ -1,6 +1,7 @@
 <template>
   <div class="hp">
-<Video />
+
+
     <div class="logo">
       <img src="~/assets/img/logo.png" width="100%" height="100%">
     </div>
@@ -17,7 +18,7 @@
       </div>
       <div class="content-right">
         <h2>
-          <nuxt-link id='gs1' to='/illustration'>GET STARTED</nuxt-link>
+          <nuxt-link id='gs1' to='/illustration'>KNOW MORE</nuxt-link>
         </h2>
       </div>
     </div>
@@ -26,13 +27,13 @@
 <script>
 
   import NavBar from '@/components/NavBar.vue'
-  import Video from '@/components/Video.vue'
+
 
   export default {
 
     components: {
-      NavBar,
-      Video
+      NavBar
+
 }
 }
 </script>
@@ -41,7 +42,7 @@
   .hp {
     position: relative;
     overflow: hidden;
-      font-weight: 100;
+    font-weight: 100;
     font-family: 'Quicksand', sans-serif;
   }
 
@@ -104,5 +105,8 @@
     padding:0;
     font-family: 'Quicksand', sans-serif;
   }
-
+.video{
+  padding:0;
+  margin:0;
+}
 </style>
