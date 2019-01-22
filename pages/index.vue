@@ -1,5 +1,6 @@
 <template>
   <div class="hp">
+<Video />
     <div class="logo">
       <img src="~/assets/img/logo.png" width="100%" height="100%">
     </div>
@@ -7,16 +8,14 @@
       <NavBar />
       <div class="content-left">
       <img src="~/assets/img/hastha.png" width="30%" height="30%">
+      <transition  enter-active-class>
         <div class="second">
           <p>A Revolutionary</p>
           <p>Company</p>
         </div>
+      </transition>
       </div>
       <div class="content-right">
-        <div class="banner">
-             <Banner />
-        </div>
-
         <h2>
           <nuxt-link id='gs1' to='/illustration'>GET STARTED</nuxt-link>
         </h2>
@@ -25,18 +24,20 @@
   </div>
 </template>
 <script>
+
   import NavBar from '@/components/NavBar.vue'
-  import Banner from '@/components/Banner.vue'
+  import Video from '@/components/Video.vue'
+
   export default {
+
     components: {
-      NavBar,Banner
-    },
-    mounted(){
-      console.log()
-    }
-  }
+      NavBar,
+      Video
+}
+}
 </script>
 <style scoped>
+  
   .hp {
     position: relative;
     overflow: hidden;
@@ -103,9 +104,5 @@
     padding:0;
     font-family: 'Quicksand', sans-serif;
   }
-  .banner{
-    position: absolute;
-    bottom:800%;
-    right:0%;
-  }
+
 </style>

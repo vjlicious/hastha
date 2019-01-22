@@ -5,59 +5,36 @@
     </div>
     <div class="bg">
       <NavBar />
-      <h1 class="heading h_vis">VISION</h1><br><br>
-      <div class="intro i_vis">
-        <p class="content">• Creating vertical financial growth and horizontal spread across the country.<br>
-          • To create a common platform for architects, Planners, Engineers, Interior designers, Developers, and also
-          for immovable property valuer, dealers, consultants, legal advisers and execute turnkey project execution.<br>
-          • To integrate the technical education with real estate industry.<br>
-          • To incubate the innovative startups on real estate platform.<br>
-          • Eventually, turn the company under the public holding format.<br>
-          • To make company turnover of 333 crore in next 7 years.<br>
-          • To sell building like a car.<br>
-        </p>
+      <div class="container">
+        <div class="item1">
+          <h1 class="heading h_vis">VISION</h1><br><br>
+          <section class="intro content i_vis">
+            <div class="vision">
+              To provide training and internship for minimum 200 students every year and to create an
+              opportunity to work on live projects.
+            </div>
+            <div class="vision">To create opportunities for other disciplines having interdependence on real estate
+              industry.</div>
+            <div class="vision"> To prepare and provide code of AI in all domains of real estate industry.</div>
+            <div class="vision">To prepare and write general guidelines for real estate industries which should
+              streamline the
+              unorganized sector</div>
+          </section>
+        </div>
+        <div class="item2">
+          <h1 class="heading h_strat">OBJECTIVE</h1><br><br>
+          <section class="intro content i_strat">
+            <div class="strat">Creating vertical financial growth and horizontal spread across the country.</div>
+            <div class="strat">To create a common platform for architects, Planners, Engineers, Interior designers, Developers, and also
+          for immovable property valuer, dealers, consultants, legal advisers and execute turnkey project execution.<br></div>
+          <div class="strat">To integrate the technical education with real estate industry.</div>
+            <div class="strat">To incubate the innovative startups on real estate platform.</div>
+            <div class="strat"> Eventually, turn the company under the public holding format.</div>
+          </section>
+        </div>
       </div>
     </div>
-    <div class="bg holla">
-      <h1 class="heading h_strat">STRATEGIC OBJECTIVE</h1><br><br>
-      <div class="intro i_strat">
-        <p class="content">• To provide training and internship for minimum 200 students every year and to create an
-          opportunity to work on live projects.<br>
-          • To create opportunities for other disciplines having interdependence on real estate industry.<br>
-          • To prepare and provide code of AI in all domains of real estate industry.<br>
-          • To prepare and write general guidelines for real estate industries which should streamline the
-          unorganized sector.<br>
-        </p>
-      </div>
-    </div>
-    <div class="bg">
-      <h1 class="heading h_vis">ACCOMPLISHMENTS</h1><br><br>
-      <div class="intro content i_vis">
-        <ul>
-          <li>Pioneer in field of construction of GFRG/ RapidWall Buildings</li>
-          <li>Demonstrated the capability of GFRG based house by creating first ever house in India, for residential
-            purpose at Rajeevnagar, Manipal</li>
-          <li>Designed and constructed more than 100 RapidWall buildings across India</li>
-          <li>Undergone training from experts at IIT Madras & RBS India</li>
-          <li>Recently built 40 RapidWall affordable housing society at Nellore, in AP State for BMTPC, Govt of India
-            (Ministry of Housing and Poverty alleviation),New Delhi.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="bg">
-      <h1 class="heading h_as">ACCOMPLISHMENTS</h1><br><br>
-      <div class="intro i_as content ">
-        <ul>
-          <li>Ongoing projects are Office Building for Kerala State Electricity Board, Kerala, Villas for Ayurvedic
-            Hospital in Coorg and multiple house constructions for individuals</li>
-          <li>Demonstrated the capability of GFRG based house by creating first ever house in India, for residential
-            purpose at Rajeevnagar, Manipal</li>
-          <li>Highly specialized workshops were conducted for Professional architects, structural engineers and
-            construction engineers of consultants firm/ construction companies or builders or real estate developers to
-            get an exposure on GFRG construction.</li>
-        </ul>
-      </div>
-    </div>
+
     <div class="bg footer">
       <div class="foot_items">
         <div class="foot links">
@@ -84,11 +61,14 @@
 <script>
   import NavBar from '@/components/NavBar.vue'
   import Banner from '@/components/Banner.vue'
+
   export default {
     components: {
-      NavBar,Banner
+      NavBar,
+      Banner
     }
   }
+
 </script>
 <style scoped>
   .il {
@@ -124,51 +104,32 @@
     padding-left: 0.2em;
     font-family: 'Roboto Slab', serif;
     font-weight: 100;
-    width: 55%;
+    text-align: center;
   }
 
-  .h_vis {
-    top: 18%;
-    left: 10%;
-  }
-
-  .h_strat {
-    top: 20%;
-    left: 40%;
-  }
-
-  .h_as {
-    top: 10%;
-    left: 40%;
-  }
-
-  .i_as {
-    top: 0%;
-    left: 70%;
-  }
 
   .intro {
     position: relative;
     background-color: white;
-    width: 50%;
     box-sizing: border-box;
     padding: 3em;
+    width:100%;
+  }
+  .item1{
+    width:50%;
+    margin:1em;
+  }
+  .item2{
+    width:50%;
+    margin:1em;
   }
 
-  .i_vis {
-    top: 15%;
-    left: 10%;
-  }
-
-  .i_strat {
-    top: 20%;
-    left: 40%;
-  }
-
-  .i_as {
-    top: 15%;
-    left: 10%;
-
+  .container {
+    width:100%;
+    display: flex;
+    justify-items: center;
+    align-content: space-around;
+    padding:3em;
   }
 
   .content {
@@ -185,14 +146,14 @@
     justify-content: center;
     align-content: space-between;
   }
-  .foot{
-    width:50%;
+
+  .foot {
+    width: 50%;
 
   }
-  .items{
-    display:flex;
 
-
+  .items {
+    display: flex;
   }
 
 </style>

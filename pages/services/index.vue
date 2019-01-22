@@ -58,24 +58,11 @@
 
   import NavBar from '@/components/NavBar.vue'
 
-  import { TimelineLite } from 'gsap'
+
   export default {
     components: {
       NavBar
-    },
-    mounted(){
-     const { vis,vir,stat } =this.$refs
-     const timeline = new TimelineLite()
-     timeline.from(vis,1,{
-       x: -100,
-       opacity: 0
-     })
-     timeline.to(vis, 1, {
-       x: 0,
-       opacity: 1
-     })
-  
-   }
+	}
   }
 
 </script>
