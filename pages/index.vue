@@ -1,5 +1,6 @@
 <template>
-  <div class="hp">
+  <div class="hp" >
+    <div class="scrolldiv" v-scroll="handlescroll">
     <div class="logo"><nuxt-link to='/'>
       <img src="~/assets/img/logo.png">
     </nuxt-link></div>
@@ -9,7 +10,7 @@
         <nuxt-link class="items" to='/aboutus'>ABOUT US</nuxt-link>
         <nuxt-link class="items" to='/contactus'>CONTACT US</nuxt-link>
     </nav>
-    <div class="bg">
+    <div class="bg molla" >
       <div class="content-left">
         <img src="~/assets/img/hastha.png" width="30%" height="30%">
           <div class="second">
@@ -19,11 +20,11 @@
       </div>
       <div class="content-right">
         <h2>
-          <nuxt-link id='gs1' to='/illustration'>KNOW MORE</nuxt-link>
+          <button id='gs1' @click="onclick">KNOW MORE</button>
         </h2>
       </div>
     </div>
-    <div class="bg holla">
+    <div class="bg holla" >
       <div class="container">
         <div class="item1">
           <h1 class="heading h_vis">VISION</h1>
@@ -55,21 +56,65 @@
         </div>
       </div>
       <h2>
-        <nuxt-link id='gs1' to='/accolades'>ACCOLADES</nuxt-link>
+        <button id='gs1' @click="onclick">ACCOLADES</button>
       </h2>
+    </div>
     </div>
   </div>
 </template>
 <script>
-  export default {
+  import {
+    TimelineMax,
+    TweenMax,
+    Back
+  } from 'gsap'
 
+  export default {
+    methods:{
+    onclick() {
+        const tl = new TimelineMax()
+        tl.add('enter')
+        tl.fromTo('.molla', 1, {
+          opacity: 1
+
+        }, {
+          delay: 2,
+          transform: "translate(-200%)"
+        }, 'enter')
+  },
+  handlescroll(evt,el){
+    if(window.scrollY > 1){
+        const tl = new TimelineMax()
+        tl.add('enter')
+        tl.fromTo('.molla', 1, {
+          opacity: 1
+        }, {
+          delay: 1,
+          transform: "translate(-200%)"
+        }, 'enter')
+    }
+    if(window.scrollY < 1){
+        const tl = new TimelineMax()
+        tl.add('enter')
+        tl.fromTo('.molla', 1, {
+          opacity: 1
+        }, {
+          delay: 1,
+          transform: "translate(0)"
+        }, 'enter')
+    }
   }
+}
+}
 </script>
 <style scoped>
-
   .hp {
     font-weight: 100;
     font-family: 'Quicksand', sans-serif;
+  }
+  .scrolldiv{
+    height: 1080px;
+    overflow: visible;
   }
   .logo {
     padding: 0;
@@ -79,6 +124,7 @@
     z-index: 100;
     top: 10%;
     left: 5%;
+    position:fixed;
   }
   .navbar{
     box-sizing: border-box;
@@ -88,6 +134,7 @@
     top:3%;
     right: 3%;
     z-index:100;
+    position:fixed;
   }
   .items {
         text-decoration:none;
@@ -99,7 +146,7 @@
   }
 
   .bg {
-    height: 91vh;
+    height: 93vh;
     width: 95.5vw;
     margin: 3em;
     padding: 2em;
@@ -111,9 +158,14 @@
     box-shadow: 0 10px 10px 3px #535353b6;
     position:absolute;
     z-index:1;
+
   }
   .holla{
+    position: fixed;
     z-index:0;
+  }
+  .molla{
+    position: fixed;
   }
 
   .content-left {
@@ -188,6 +240,12 @@
   }
 
   #gs1 {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
     position: absolute;
     width: 200px;
     bottom: 0%;
