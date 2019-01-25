@@ -1,7 +1,9 @@
 <template>
   <div class="au">
-    <div class="logo">
+  <div class="home-page">
+	    <nuxt-link to='/'><div class="logo">
         <img src="~/assets/img/logo.png" width="100%" height="100%">
+      </div></nuxt-link>
       </div>
     <div class="bg">
       <NavBar />

@@ -31,10 +31,11 @@
 }
 </script>
 <style scoped>
-  
+html {
+  overflow: hidden;
+}
   .hp {
     position: relative;
-    overflow: hidden;
     font-weight: 100;
     font-family: 'Quicksand', sans-serif;
   }
@@ -50,7 +51,7 @@
   }
 
   .bg {
-    height: 93vh;
+    height: 90.5vh;
     margin: 3em;
     padding: 2em;
     box-sizing: border-box;
@@ -60,7 +61,6 @@
     background-size: cover;
     z-index: -1;
     box-shadow: 0 10px 10px 3px #535353b6;
-
   }
 
   .content-left {

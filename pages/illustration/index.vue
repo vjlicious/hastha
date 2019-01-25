@@ -1,8 +1,8 @@
 <template>
   <div class="il">
-    <div class="logo">
-      <img src="~/assets/img/logo.png" width="100%" height="100%">
-    </div>
+	    <nuxt-link to='/'><div class="logo">
+        <img src="~/assets/img/logo.png" width="100%" height="100%">
+      </div></nuxt-link>
     <div class="bg">
       <NavBar />
       <div class="container">
