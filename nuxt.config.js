@@ -49,5 +49,7 @@ module.exports = {
  build: {
   
 },
-plugins: []
-};
+plugins: [
+  '~/plugins/scroll.js'
+],
+}

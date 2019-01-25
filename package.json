@@ -12,17 +12,14 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.0.0",
-    "body-parser": "^1.18.3",
     "bootstrap": "^4.2.1",
     "bootstrap-vue": "^2.0.0-rc.11",
     "cross-env": "^5.2.0",
     "gsap": "^2.0.2",
     "import-loader": "^1.0.1",
-    "jquery": "^3.3.1",
     "node-sass": "^4.11.0",
     "nuxt": "^2.0.0",
     "sass-loader": "^7.1.0",
-    "scrollmagic": "^2.0.6",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
