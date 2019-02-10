@@ -1,9 +1,9 @@
 <template>
   <div class="hp">
-    <div class="scrolldiv" v-scroll="handlescroll">
+    <div class="scrolldiv">
       <div class="logo">
         <nuxt-link to='/'>
-          <img src="~/assets/img/logo.png">
+          <img src="~/assets/img/logo.png" height="100%" width="100%">
         </nuxt-link>
       </div>
       <nav class="navbar">
@@ -34,7 +34,7 @@
           </ul>
         </div>
       </div>
-      <div class="bg molla">
+      <div class="bg molla" v-scroll="hs_molla">
         <div class="content-left">
           <img src="~/assets/img/hastha.png" width="30%" height="30%">
           <div class="second">
@@ -44,44 +44,40 @@
         </div>
         <div class="content-right">
           <h2>
-            <button id='gs1' @click="onclick">KNOW MORE</button>
+            <button id='button' @click="onclick">KNOW MORE</button>
           </h2>
         </div>
       </div>
-      <div class="bg holla">
-        <div class="container">
-          <div class="item1">
-            <h1 class="heading h_vis">VISION</h1>
-            <section class="intro content i_vis">
-              <div class="vision">
-                To provide training and internship for minimum 200 students every year and to create an
-                opportunity to work on live projects.
-              </div>
-              <div class="vision">To create opportunities for other disciplines having interdependence on real estate
-                industry.</div>
-              <div class="vision"> To prepare and provide code of AI in all domains of real estate industry.</div>
-              <div class="vision">To prepare and write general guidelines for real estate industries which should
-                streamline the
-                unorganized sector</div>
-            </section>
+      <div class="bg holla" v-scroll="hs_holla">
+        <h1 class="heading h_vis">VISION</h1>
+        <div class="intro i_vis">
+          <div class="vision">
+            To provide training and internship for minimum 200 students every year and to create an
+            opportunity to work on live projects.
           </div>
-          <div class="item2">
-            <h1 class="heading h_strat">OBJECTIVE</h1>
-            <section class="intro content i_strat">
-              <div class="strat">Creating vertical financial growth and horizontal spread across the country.</div>
-              <div class="strat">To create a common platform for architects, Planners, Engineers, Interior designers,
-                Developers, and also
-                for immovable property valuer, dealers, consultants, legal advisers and execute turnkey project
-                execution.<br></div>
-              <div class="strat">To integrate the technical education with real estate industry.</div>
-              <div class="strat">To incubate the innovative startups on real estate platform.</div>
-              <div class="strat"> Eventually, turn the company under the public holding format.</div>
-            </section>
-          </div>
+          <div class="vision">To create opportunities for other disciplines having interdependence on real estate
+            industry.</div>
+          <div class="vision"> To prepare and provide code of AI in all domains of real estate industry.</div>
+          <div class="vision">To prepare and write general guidelines for real estate industries which should
+            streamline the
+            unorganized sector</div>
         </div>
-        <h2>
-          <button id='gs1' @click="onclick">ACCOLADES</button>
-        </h2>
+
+      </div>
+      <div class="bg kolla">
+        <div class="item">
+          <h1 class="heading h_strat">OBJECTIVE</h1>
+          <section class="intro i_strat">
+            <div class="strat">Creating vertical financial growth and horizontal spread across the country.</div>
+            <div class="strat">To create a common platform for architects, Planners, Engineers, Interior designers,
+              Developers, and also
+              for immovable property valuer, dealers, consultants, legal advisers and execute turnkey project
+              execution.<br></div>
+            <div class="strat">To integrate the technical education with real estate industry.</div>
+            <div class="strat">To incubate the innovative startups on real estate platform.</div>
+            <div class="strat"> Eventually, turn the company under the public holding format.</div>
+          </section>
+        </div>
       </div>
     </div>
   </div>
@@ -112,11 +108,11 @@
           transform: "translate(-200%)"
         }, 'enter')
       },
-      handlescroll(evt, el) {
-        if (window.scrollY > 10) {
+      hs_molla(evt, el) {
+        if (window.scrollY > 500) {
           const tl = new TimelineMax()
           tl.add('enter')
-          
+
           tl.fromTo('.molla', 1, {
             opacity: 1,
             delay: -1
@@ -124,80 +120,121 @@
             transform: "translate(-130%)"
           }, 'enter')
 
-          tl.to('.toggle-btn', 0.5,{
+          tl.to('.toggle-btn', 0.5, {
             display: "block",
             delay: -1
           })
-          tl.to('.navbar', 0.5,{
-            display:"none",
+          tl.to('.navbar', 0.5, {
+            display: "none",
             delay: -1,
             opacity: 0
           })
         }
-        if (window.scrollY < 1) {
+
+        if (window.scrollY < 500) {
           const tl = new TimelineMax()
           tl.add('enter')
           tl.fromTo('.molla', 1, {
             opacity: 1,
-            delay:-1
+            delay: -1
           }, {
             transform: "translate(0)"
           }, 'enter')
 
-          tl.to('.toggle-btn', 0.05,{
+          tl.to('.toggle-btn', 0.05, {
             display: "none",
             delay: -1
           })
-          tl.to('.navbar', 0.5,{
-            display:"flex",
+          tl.to('.navbar', 0.5, {
+            display: "flex",
             delay: -1,
-            opacity:1
+            opacity: 1
           })
         }
       },
-      togglebtn() {
-        let tl2 = new TimelineMax()
-        if (this.sw == false) {
-          tl2.add('enter')
-          tl2.to(".menu", 1, {
-            display: "block",
-            top: "0%",
-            ease: Expo.easeInOut,
-            delay:-1
-          })
-          this.sw=true
+      hs_holla(evt, el) {
+        if (window.scrollY > 1000) {
+          const tl = new TimelineMax()
+          tl.add('.enter')
+          tl.fromTo('.holla', 1, {
+            opacity: 1,
+            delay: 1
+          }, {
+            transform: 'translate(-130%)'
+          }, 'enter')
         }
-        else{
-          tl2.add('enter')
-          tl2.to(".menu", 1,{
-            display:"none",
-            delay:-1
-          })
-          this.sw=false
+
+        if (window.scrollY < 1000) {
+          const tl = new TimelineMax()
+          tl.add('.enter')
+          tl.fromTo('.holla', 1, {
+            opacity: 1,
+            delay: -1
+          }, {
+            transform: 'translate(0)'
+          }, 'enter')
         }
+      },
+    },
+    togglebtn() {
+      let tl2 = new TimelineMax()
+      if (this.sw == false) {
+        tl2.add('enter')
+        tl2.to(".menu", 1, {
+          display: "block",
+          top: "0%",
+          ease: Expo.easeInOut,
+          delay: -1
+        })
+        this.sw = true
+      } else {
+        tl2.add('enter')
+        tl2.to(".menu", 1, {
+          display: "none",
+          delay: -1
+        })
+        this.sw = false
       }
     }
   }
+
 </script>
 <style scoped>
   .hp {
     font-weight: 100;
     font-family: 'Quicksand', sans-serif;
+    height: 100%;
   }
 
   .scrolldiv {
-    height: 1080px;
+    height: 10000px;
   }
 
   .logo {
-    padding: 0;
-    margin: 0;
     box-sizing: border-box;
-    position: absolute;
+    position: relative;
+    width: 3%;
     z-index: 100;
     top: 10%;
     left: 5%;
     position: fixed;
+  }
+
+  #button {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    position: absolute;
+    width: 200px;
+    bottom: 0%;
+    left: 82%;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    color: rgb(29, 29, 29);
+    font-weight: 100;
   }
 
   .navbar {
@@ -231,8 +268,8 @@
 
   .toggle-btn {
     position: absolute;
-    top:5%;
-    left:90%;
+    top: 5%;
+    left: 90%;
     margin: 1.4em;
     padding: 1em;
     width: 40px;
@@ -240,7 +277,7 @@
     right: 0;
     cursor: pointer;
     position: fixed;
-    display:none;
+    display: none;
   }
 
   span.one {
@@ -288,25 +325,17 @@
     margin: 3em;
     padding: 2em;
     box-sizing: border-box;
-    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.657), rgba(63, 63, 63, 0)), url('~assets/img/bg.jpg');
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 10px 10px 3px #535353b6;
     position: absolute;
-    z-index: 1;
-
-  }
-
-  .holla {
-    position: fixed;
-    z-index: 0;
-    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.657), rgba(63, 63, 63, 0)), url('~assets/img/bg2.jpg');
-    background-position: center;
   }
 
   .molla {
     position: fixed;
+    background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.657), rgba(63, 63, 63, 0)), url('~assets/img/bg.jpg');
+    z-index: 2;
   }
 
   .content-left {
@@ -320,7 +349,6 @@
 
   .content-right {
     position: absolute;
-
     top: 85%;
     left: 82%;
   }
@@ -334,38 +362,12 @@
     left: 1%;
   }
 
-  p {
-    margin: 0;
-    padding: 0;
-    font-family: 'Quicksand', sans-serif;
-  }
-
-  .container {
-    width: 100%;
-    display: flex;
-    justify-items: center;
-    align-content: space-between;
-    padding: 2em;
-    padding-top: 6em;
-  }
-
-  .item1 {
-    width: 50%;
-    margin: 1em;
-  }
-
-  .item2 {
-    width: 50%;
-    margin: 1em;
-  }
-
   .heading {
     position: relative;
-    font-size: 6em;
-    padding-left: 0.2em;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Prata', serif;
     font-weight: 700;
     text-align: center;
+    z-index: -3;
   }
 
   .intro {
@@ -373,30 +375,31 @@
     box-sizing: border-box;
     padding: 2em;
     width: 100%;
-  }
-
-  .content {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6em;
     font-weight: 300;
     text-justify: center;
+
   }
 
-  #gs1 {
-    background-color: Transparent;
-    background-repeat: no-repeat;
-    border: none;
-    cursor: pointer;
-    overflow: hidden;
-    outline: none;
-    position: absolute;
-    width: 200px;
-    bottom: 0%;
-    left: 82%;
-    font-family: 'Quicksand', sans-serif;
-    text-decoration: none;
-    color: rgb(29, 29, 29);
-    font-weight: 100;
+  .holla {
+    position: fixed;
+    z-index: 1;
+    background: white;
+  }
+
+  .h_vis {
+    padding:0;
+    margin:0;
+    color: rgba(14, 14, 14, 0.158);
+    font-size: 15em;
+    top:35%;
+  }
+
+  .kolla {
+    position: fixed;
+    z-index: 0;
+    background: rgb(255, 255, 255);
   }
 
 </style>

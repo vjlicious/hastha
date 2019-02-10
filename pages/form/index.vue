@@ -30,7 +30,7 @@
         <b-btn v-b-modal.modal2 class="apply">APPLY NOW</b-btn>
       </b-modal>
       <b-modal id="modal2" class="desc" title="">
-        <form>
+        <form  >
           <div class="form-group is-valid">
 
             <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email:"

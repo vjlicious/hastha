@@ -20,11 +20,7 @@ html{
 body{
     font-family: 'Roboto', sans-serif;
     color: #3C3C3C;
-    font-weight: 100;
-    line-height: 1.6;
     background-color:rgb(177, 177, 177);
-    word-spacing: 1px;
-    line-height: 1.2;
 }
 .page-enter-active,
 .page-leave-active {

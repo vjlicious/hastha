@@ -1,0 +1,113 @@
+  import {
+    TimelineMax,
+    TweenMax,
+    Back
+  } from 'gsap'
+
+  export default {
+    data() {
+      return {
+        sw: false,
+        sw2: false
+      }
+    },
+    methods: {
+      onclick() {
+        const tl = new TimelineMax()
+        tl.add('enter')
+        tl.fromTo('.molla', 1, {
+          opacity: 1
+
+        }, {
+          delay: 2,
+          transform: "translate(-200%)"
+        }, 'enter')
+      },
+      hs_molla(evt, el) {
+        if (window.scrollY > 10) {
+          const tl = new TimelineMax()
+          tl.add('enter')
+          
+          tl.fromTo('.molla', 1, {
+            opacity: 1,
+            delay: -1
+          }, {
+            transform: "translate(-130%)"
+          }, 'enter')
+
+          tl.to('.toggle-btn', 0.5,{
+            display: "block",
+            delay: -1
+          })
+          tl.to('.navbar', 0.5,{
+            display:"none",
+            delay: -1,
+            opacity: 0
+          })
+        }
+        if (window.scrollY < 10) {
+          const tl = new TimelineMax()
+          tl.add('enter')
+          tl.fromTo('.molla', 1, {
+            opacity: 1,
+            delay:-1
+          }, {
+            transform: "translate(0)"
+          }, 'enter')
+
+          tl.to('.toggle-btn', 0.05,{
+            display: "none",
+            delay: -1
+          })
+          tl.to('.navbar', 0.5,{
+            display:"flex",
+            delay: -1,
+            opacity:1
+          })
+        }
+      },
+      hs_holla(evt, el){
+        if(window.scrollY > 1000){
+          const tl = new TimelineMax()
+          tl.add('.enter')
+          tl.fromTo('.holla', 1,{
+            opacity:1,
+            delay: 1
+          },{
+            transform: 'translate(-130%)'
+          }, 'enter')
+        }
+         if(window.scrollY < 1000){
+          const tl = new TimelineMax()
+          tl.add('.enter')
+          tl.fromTo('.holla', 1,{
+            opacity:1,
+            delay: -1
+          },{
+            transform: 'translate(0)'
+          }, 'enter')
+        }
+      },
+      togglebtn() {
+        let tl2 = new TimelineMax()
+        if (this.sw == false) {
+          tl2.add('enter')
+          tl2.to(".menu", 1, {
+            display: "block",
+            top: "0%",
+            ease: Expo.easeInOut,
+            delay:-1
+          })
+          this.sw=true
+        }
+        else{
+          tl2.add('enter')
+          tl2.to(".menu", 1,{
+            display:"none",
+            delay:-1
+          })
+          this.sw=false
+        }
+      }
+    }
+  }
